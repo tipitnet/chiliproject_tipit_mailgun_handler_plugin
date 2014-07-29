@@ -10,6 +10,11 @@ Dispatcher.to_prepare :chiliproject_tipit_mail_handler do
     Attachment.send(:include, TipitMailHandler::AttachmentPatch)
   end
 
+  require_dependency 'mailer'
+  unless Mailer.included_modules.include? TipitMailHandler::MailerPatch
+    Mailer.send(:include, TipitMailHandler::MailerPatch)
+  end
+
 end
 
 Redmine::Plugin.register :chiliproject_tipit_mail_handler do

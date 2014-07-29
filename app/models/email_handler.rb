@@ -157,6 +157,7 @@ class EmailHandler < Incoming::Strategies::Mailgun
   end
 
   def add_default_watchers(issue)
+    return unless issue.project.respond_to? 'default_watchers'
     mail_logger.debug "Entering add_default_watchers"
     default_watchers = issue.project.default_watchers
     mail_logger.debug "Default watchert to add [#{default_watchers}]"
