@@ -1,0 +1,26 @@
+From: Somebody <somebody@someplace.com>
+Content-Type: multipart/alternative;
+boundary="Apple-Mail=_14000D11-5A69-42B3-B854-326485031034"
+X-Smtp-Server: zmail.someplace.com:somebody@someplace.com
+Subject: Another RICH TEXT issue creation email from iMail
+X-Universally-Unique-Identifier: 3fc3fff5-fdcb-464b-962c-ba6927acacf0
+Date: Thu, 7 Jun 2012 12:29:28 -0300
+Message-Id: <D08A6D79-F666-49F0-94CB-ADABEC3D0448@someplace.com>
+To: chiliproject@dev.chili.someplace.com
+Mime-Version: 1.0 (Apple Message framework v1278)
+
+--Apple-Mail=_14000D11-5A69-42B3-B854-326485031034
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain;
+charset=us-ascii
+
+This is plain text
+
+--Apple-Mail=_14000D11-5A69-42B3-B854-326485031034
+Content-Transfer-Encoding: 7bit
+Content-Type: text/html;
+   charset=us-ascii
+
+This is HTML text
+
+--Apple-Mail=_14000D11-5A69-42B3-B854-326485031034--

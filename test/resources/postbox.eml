@@ -1,0 +1,60 @@
+Message-ID: <517FCD5A.1000909@tipit.net>
+Date: Tue, 30 Apr 2013 08:55:38 -0500
+From: Jimmy McArthur <jp@tipit.net>
+User-Agent: Postbox 3.0.7 (Macintosh/20130119)
+MIME-Version: 1.0
+To: Jimmy McArthur <jimmy@tipit.net>
+Subject: Spacing Mail Test
+Content-Type: multipart/alternative;
+ boundary="------------070501010102050904070204"
+
+This is a multi-part message in MIME format.
+--------------070501010102050904070204
+Content-Type: text/plain; charset=ISO-8859-1; format=flowed
+Content-Transfer-Encoding: 7bit
+
+This is a test to test some testing with.  Why does Chili do this? It 
+only makes me sad when this happens. What are some other things I can 
+type?  Hard for me to say.  It's very early and I need a cup of coffee.  
+I hope this does it.
+
+Chili heading test
+* Bullet test
+* Bullet test 2
+** sub-bullet
+
+Postbox heading/bullet test
+
+  * This is somethign that comes through from time to time
+  * A bullet in Postbox format
+
+
+--------------070501010102050904070204
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head><body
+ text="#000000" bgcolor="#FFFFFF">
+This is a test to test some testing with.&nbsp; Why does Chili do this? It 
+only makes <span style="font-style: italic;">me</span> sad when this 
+happens. What are some other things I can type?&nbsp; Hard for me to say.&nbsp; 
+It's very early and I need a cup of coffee.&nbsp; I hope this does it.<br>
+  <br>
+  <span style="font-weight: bold;">Chili heading test</span><br>
+* Bullet test<br>
+* Bullet test 2<br>
+** sub-bullet<br>
+  <br>
+  <span style="font-weight: bold;">Postbox heading/bullet test<br>
+  </span>
+  <ul>
+    <li>This is somethign that comes through from time to time</li>
+    <li>A bullet in Postbox format<br>
+    </li>
+  </ul>
+</body>
+</html>
+
+--------------070501010102050904070204--
+

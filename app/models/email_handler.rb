@@ -37,6 +37,8 @@ class EmailHandler < Incoming::Strategies::Mailgun
       # and should return true so the email system does not try to resend
       return true
     end
+    register_source_app(email)
+
     @email = email
     sender_email = email.from.to_a.first.to_s.strip
     # Ignore emails received from the application emission address to avoid hell cycles
@@ -437,4 +439,9 @@ class EmailHandler < Incoming::Strategies::Mailgun
     end
   end
 
+  def register_source_app(email)
+    detector = SourceAppDetector.new
+    source_app = detector.detect email
+    MailRecord::create_from(email.from.first, source_app)
+  end
 end

@@ -1,0 +1,100 @@
+Return-Path: somebody@someplace.com
+Received: from zmail.someplace.com (LHLO zmail.someplace.com) (1.1.1.1) by
+ zmail.someplace.com with LMTP; Mon, 25 Jun 2012 12:50:09 -0500 (CDT)
+Received: from localhost (localhost.localdomain [127.0.0.1])
+	by zmail.someplace.com (Postfix) with ESMTP id 1883DC420AD
+	for <somebody@someplace.com>; Mon, 25 Jun 2012 12:50:09 -0500 (CDT)
+X-Virus-Scanned: amavisd-new at zmail.someplace.com
+X-Spam-Flag: NO
+X-Spam-Score: -0.727
+X-Spam-Level: 
+X-Spam-Status: No, score=-0.727 tagged_above=-10 required=6.6
+	tests=[ALL_TRUSTED=-1, BAYES_00=-1.9, HTML_MESSAGE=0.001,
+	TVD_RCVD_SINGLE=2.172] autolearn=no
+Received: from zmail.someplace.com ([127.0.0.1])
+	by localhost (zmail.someplace.com [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 36h7NADDorJK for <somebody@someplace.com>;
+	Mon, 25 Jun 2012 12:50:08 -0500 (CDT)
+Received: from DJ (unknown [190.188.50.14])
+	by zmail.someplace.com (Postfix) with ESMTPSA id 2C4D8C42034
+	for <somebody@someplace.com>; Mon, 25 Jun 2012 12:50:07 -0500 (CDT)
+From: "Somebody Marcet" <somebody@someplace.com>
+To: <somebody@someplace.com>
+Subject: Simple email from Outlook
+Date: Mon, 25 Jun 2012 14:50:02 -0300
+Message-ID: <009c01cd52fa$f6713b90$e353b2b0$@someplace.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_009D_01CD52E1.D125B140"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: Ac1S+vG8xmK5z0GATnOL9yG5CWuVHg==
+Content-Language: es-ar
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_009D_01CD52E1.D125B140
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+This is plain text
+
+
+------=_NextPart_000_009D_01CD52E1.D125B140
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 14 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DES-AR link=3Dblue =
+vlink=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal>This is =
+HTML text<o:p></o:p></p></div></body></html>
+------=_NextPart_000_009D_01CD52E1.D125B140--
+

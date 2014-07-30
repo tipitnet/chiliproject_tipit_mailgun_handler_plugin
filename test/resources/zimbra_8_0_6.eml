@@ -1,0 +1,148 @@
+Date: Tue, 10 Jun 2014 11:52:14 -0500 (CDT)
+From: "JP Maxwell / tipit.net" <jp@tipit.net>
+To: chiliproject@chili.tipit.net
+Message-ID: <1782807321.641418.1402419134867.JavaMail.zimbra@tipit.net>
+In-Reply-To: <chiliproject.issue_journal-67983.20140609205847@chili.tipit.net>
+References: <chiliproject.issue-6514.20140527203609@chili.tipit.net> <chiliproject.issue_journal-67983.20140609205847@chili.tipit.net>
+Subject: Re: [Chili Dev - Ticket #6514] (Resolved) Populate Incoming E-mail
+ "truncate" strings
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_641417_1677895554.1402419134867"
+X-Mailer: Zimbra 8.0.6_GA_5922 (ZimbraWebClient - FF29 (Mac)/8.0.6_GA_5922)
+Thread-Topic: (Resolved) Populate Incoming E-mail "truncate" strings
+Thread-Index: 0NWmLeBevIA168DckfvXUW/6tmuEAQ==
+
+------=_Part_641417_1677895554.1402419134867
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+I'm still seeing some instances where the e-mails aren't properly truncated. It is better, but not 100%. Let's see how this one is handled. 
+
+
+----- Original Message -----
+
+From: chiliproject@chili.tipit.net 
+To: jp@tipit.net 
+Sent: Monday, June 9, 2014 3:58:47 PM 
+Subject: [Chili Dev - Ticket #6514] (Resolved) Populate Incoming E-mail "truncate" strings 
+
+WHEN REPLYING, DO NOT ADD TEXT BELOW THIS LINE. 
+Issue #6514 has been updated by Claudio Acciaresi. 
+
+    * Status changed from Feedback to Resolved 
+    * Assignee changed from Claudio Acciaresi to JP Maxwell 
+    * % Done changed from 0 to 100 
+
+
+JP, I'm marking this one as resolved and assigning back to you, so that you can close it if you didn't notice any other occurrence of this problem. 
+Ticket #6514: Populate Incoming E-mail "truncate" strings 
+
+
+    * Author: JP Maxwell 
+    * Status: Resolved 
+    * Priority: Normal 
+    * Assignee: JP Maxwell 
+    * Category: 
+    * Target version: 
+    * Sub Status: None 
+
+
+I noticed this was not populated: 
+
+https://chili.tipit.net/settings/edit?tab=mail_handler 
+
+
+Are there values that should have come over from our old Chili instance? Is this used? I put in the line from the Zimbra e-mails. 
+
+
+
+You have received this notification because you have either subscribed to it, or are involved in it. 
+To change your notification preferences, please click here: http://chili.tipit.net 
+
+
+------=_Part_641417_1677895554.1402419134867
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<html><body><div style="font-family: Arial; font-size: 12pt; color: #000000"><div>I'm still seeing some instances where the e-mails aren't properly truncated.&nbsp;&nbsp; It is better, but not 100%.&nbsp;&nbsp; Let's see how this one is handled. <br></div><div><br></div><div><br></div><hr id="zwchr"><div style="color:#000;font-weight:normal;font-style:normal;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:12pt;"><b>From: </b>chiliproject@chili.tipit.net<br><b>To: </b>jp@tipit.net<br><b>Sent: </b>Monday, June 9, 2014 3:58:47 PM<br><b>Subject: </b>[Chili Dev - Ticket #6514] (Resolved) Populate Incoming E-mail "truncate" strings<br><div><br></div>
+
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 0.8em;
+  color:#484848;
+}
+h1, h2, h3 { font-family: "Trebuchet MS", Verdana, sans-serif; margin: 0px; }
+h1 { font-size: 1.2em; }
+h2, h3 { font-size: 1.1em; }
+a, a:link, a:visited { color: #2A5685;}
+a:hover, a:active { color: #c61a1a; }
+a.wiki-anchor { display: none; }
+hr {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  border: 0;
+}
+blockquote {
+  border-left: 3px solid #E0E0E0;
+  font-style: italic;
+  margin-left: 2.4em;
+  padding-left: 0.6em;
+}
+.footer {
+  font-size: 0.8em;
+  font-style: italic;
+}
+</style>
+
+
+<span class="header"></span>
+
+<div id="issue_details">
+	<span>WHEN REPLYING, DO NOT ADD TEXT BELOW THIS LINE.</span><br>
+	Issue #6514 has been updated by Claudio Acciaresi.
+
+	<ul>
+	
+	    <li>Status changed from Feedback to Resolved</li>
+	
+	    <li>Assignee changed from Claudio Acciaresi to JP Maxwell</li>
+	
+	    <li>% Done changed from 0 to 100</li>
+	
+	</ul>
+
+	<p>JP, I'm marking this one as resolved and assigning back to you, so that you can close it if you didn't notice any other occurrence of this problem.</p>
+	<hr>
+	<h1><a href="https://chili.tipit.net/issues/6514" target="_blank">Ticket #6514: Populate Incoming E-mail "truncate" strings</a><br data-mce-bogus="1"></h1>
+
+<ul>
+<li>Author: JP Maxwell</li>
+<li>Status: Resolved</li>
+<li>Priority: Normal</li>
+<li>Assignee: JP Maxwell</li>
+<li>Category: </li>
+<li>Target version: </li>
+
+  <li>Sub Status: None</li>
+
+</ul>
+
+<p>I noticed this was not populated:</p>
+
+
+	<p><a class="external" href="https://chili.tipit.net/settings/edit?tab=mail_handler" target="_blank">https://chili.tipit.net/settings/edit?tab=mail_handler</a><br data-mce-bogus="1"></p>
+
+
+	<p>Are there values that should have come over from our old Chili instance?  Is this used?  I put in the line from the Zimbra e-mails.</p>
+
+</div>
+
+<hr>
+<span class="footer"><p>You have received this notification because you have either subscribed to it, or are involved in it.<br>To change your notification preferences, please click here: <a class="external" href="http://chili.tipit.net" target="_blank">http://chili.tipit.net</a><br data-mce-bogus="1"></p></span>
+
+
+</div><div><br></div></div></body></html>
+------=_Part_641417_1677895554.1402419134867--

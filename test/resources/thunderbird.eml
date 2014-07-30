@@ -1,0 +1,195 @@
+Return-Path: <cacciaresi@gmail.com>
+Received: from [192.168.1.112] ([186.136.108.233])
+        by mx.google.com with ESMTPSA id k76sm7218960yho.18.2014.02.13.08.12.30
+        for <cacciaresi@gmail.com>
+        (version=TLSv1 cipher=ECDHE-RSA-RC4-SHA bits=128/128);
+        Thu, 13 Feb 2014 08:12:31 -0800 (PST)
+Message-ID: <52FCEEED.3080101@gmail.com>
+Date: Thu, 13 Feb 2014 13:12:29 -0300
+From: Claudio Acciaresi <cacciaresi@gmail.com>
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:24.0) Gecko/20100101 Thunderbird/24.2.0
+MIME-Version: 1.0
+To: cacciaresi@gmail.com
+Subject: Re: [test project - Bug #8] Testing 4559 #4
+References: <chiliproject.issue-8.20140120104927@example.net> <chiliproject.issue_journal-89.20140213131110@example.net>
+In-Reply-To: <chiliproject.issue_journal-89.20140213131110@example.net>
+Content-Type: multipart/alternative;
+ boundary="------------030908080800070503010302"
+
+This is a multi-part message in MIME format.
+--------------030908080800070503010302
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Ok, so now we *are* going to /test/ this new _implementation_ of the new =
+line this next workd will have two styles in the _/*same place*/__/
+
+This is a new line all with underline.
+
+/_/Now are are going to use a list with items:
+/
+
+  * /firtst item/
+  * /second item/
+  * /last one/
+
+/This
+is
+enough
+for
+now.
+
+
+/
+On 13/02/14 13:11, cacciaresi@gmail.com wrote:
+> WHEN REPLYING, DO NOT ADD TEXT BELOW THIS LINE.
+> Issue #8 has been updated by ChiliProject Admin.
+>
+> 1
+>
+> -----------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------
+>
+>
+>   Bug #8: Testing 4559 #4 <http://localhost:3000/issues/8>
+>
+>   * Author: ChiliProject Admin
+>   * Status: Closed
+>   * Priority: Normal
+>   * Assignee: Diego Maradona
+>   * Category:
+>   * Target version:
+>
+> -----------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------------------------------------=
+-------------------------------------------
+>
+> You have received this notification because you have either subscribed =
+to it, or are involved in it.
+> To change your notification preferences, please click here: http://host=
+name/my/account
+>
+
+
+--------------030908080800070503010302
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  </head>
+  <body text="#000000" bgcolor="#FFFFFF">
+    Ok, so now we <b>are</b> going to <i>test</i> this new <u>implementation</u>
+    of the new line this next workd will have two styles in the <u><i><b>same
+
+          place</b></i></u><u><i><br>
+        <br>
+        This is a new line all with underline.<br>
+        <br>
+      </i></u><i>Now are are going to use a list with items:<br>
+    </i>
+    <ul>
+      <li><i>firtst item</i></li>
+      <li><i>second item</i></li>
+      <li><i>last one</i></li>
+    </ul>
+    <i>This <br>
+      is <br>
+      enough<br>
+      for <br>
+      now.<br>
+      <br>
+      <br>
+    </i>
+    <div class="moz-cite-prefix">On 13/02/14 13:11, <a class="moz-txt-link-abbreviated" href="mailto:cacciaresi@gmail.com">cacciaresi@gmail.com</a>
+      wrote:<br>
+    </div>
+    <blockquote
+      cite="mid:chiliproject.issue_journal-89.20140213131110@example.net"
+      type="cite">
+      <style>
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 0.8em;
+  color:#484848;
+}
+h1, h2, h3 { font-family: "Trebuchet MS", Verdana, sans-serif; margin: 0px; }
+h1 { font-size: 1.2em; }
+h2, h3 { font-size: 1.1em; }
+a, a:link, a:visited { color: #2A5685;}
+a:hover, a:active { color: #c61a1a; }
+a.wiki-anchor { display: none; }
+hr {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  border: 0;
+}
+blockquote {
+  border-left: 3px solid #E0E0E0;
+  font-style: italic;
+  margin-left: 2.4em;
+  padding-left: 0.6em;
+}
+.footer {
+  font-size: 0.8em;
+  font-style: italic;
+}
+</style><span class="header"></span>
+      <div id="issue_details"> <span>WHEN REPLYING, DO NOT ADD TEXT
+          BELOW THIS LINE.</span><br>
+        Issue #8 has been updated by ChiliProject Admin.
+        <ul>
+        </ul>
+        <p>1</p>
+        <hr>
+        <h1><a moz-do-not-send="true"
+            href="http://localhost:3000/issues/8">Bug #8: Testing 4559
+            #4</a></h1>
+        <ul>
+          <li>Author: ChiliProject Admin</li>
+          <li>Status: Closed</li>
+          <li>Priority: Normal</li>
+          <li>Assignee: Diego Maradona</li>
+          <li>Category: </li>
+          <li>Target version: </li>
+        </ul>
+      </div>
+      <hr>
+      <span class="footer">
+        <p>You have received this notification because you have either
+          subscribed to it, or are involved in it.<br>
+          To change your notification preferences, please click here: <a
+            moz-do-not-send="true" class="external"
+            href="http://hostname/my/account">http://hostname/my/account</a></p>
+      </span>
+    </blockquote>
+    <br>
+  </body>
+</html>
+
+--------------030908080800070503010302--
