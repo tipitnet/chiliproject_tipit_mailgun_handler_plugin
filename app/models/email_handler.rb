@@ -131,7 +131,7 @@ class EmailHandler < Incoming::Strategies::Mailgun
     add_default_watchers(issue)
     issue.save!
     if user.anonymous?
-      email_watcher_address = email.from.to_s
+      email_watcher_address = email.from.first.to_s
       watcher = Watcher.new()
       watcher.email_watchers = []
       watcher.email_watchers << email_watcher_address
