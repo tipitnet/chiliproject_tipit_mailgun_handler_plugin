@@ -8,3 +8,13 @@ This plug allows to receive emails from Mailgun and also provides  some other em
 * Process emails with embedded images to show then in the Issue body
 * Identify source application used to send the email and save this information to database. This information is useful to enhance the plugin
 
+
+Installation
+------------
+
+Place the plugin under the vendor/plugins directory on your chiliproject root location.
+Set the following environment varibles:
+
+* MAILGUN_API_KEY
+* GLOBAL_INBOX_PROJECT
+
