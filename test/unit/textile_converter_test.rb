@@ -309,6 +309,10 @@ Heading</h1>'
                    '<ul><li>item1</li></ul><ol><li>item1</li></ol>'
   end
 
+  def test_hr
+    assert_textile "\n",'<hr>'
+  end
+
   # We are changing newlines in the original HTML to spaces, so in this particular case a space will be added
   # for the content of the span. More analysis should be made to see if we really want this behaviour for all the cases.
   def test_new_line_at_span_start
@@ -330,7 +334,7 @@ test</span>"
     image_map = { "<ii_1477f9531e1536e7>" => 'image1.png' }
     converter = TipitMailgunHandler::TextileConverter.new(input, image_map)
     actual = converter.to_textile
-    expected = "\n\nplain text\n!image1.png!"
+    expected = "\nplain text\n!image1.png!\n\n\n"
     assert_equal expected, actual
   end
 

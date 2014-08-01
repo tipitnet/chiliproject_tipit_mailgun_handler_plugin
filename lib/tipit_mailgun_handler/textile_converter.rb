@@ -32,15 +32,18 @@ module TipitMailgunHandler
       create_document(html)
 
       # Order is important here.
+      process_divs
       process_paragraphs
       process_style_modifiers
       process_headers
       process_lists
       process_anchors
       process_brs
+      process_hrs
       process_spans
       process_html_spaces
       process_images
+      process_divs
     end
 
     def process_images
@@ -68,7 +71,7 @@ module TipitMailgunHandler
       remove_title_if_present
     end
 
-    def process_paragraphs
+    def process_divs
       # workaround for nested divs.
       @doc.css('div').each do |x|
         x.attributes.each_key { |k| x.remove_attribute(k)}
@@ -78,13 +81,9 @@ module TipitMailgunHandler
         text = node.children.to_s
         node.replace("#{text.strip}\n")
       end
+    end
 
-      sorted = @doc.css('div').sort { |a, b| a.children.size <=> b.children.size }
-      sorted.each do |node|
-        text = node.children.to_s
-        node.replace("#{text.strip}\n")
-      end
-
+    def process_paragraphs
       # workaround for nested p tags.
       @doc.css('p').sort { |a, b| a.children.size <=> b.children.size }.each do |node|
         text = node.children.to_s
@@ -157,6 +156,12 @@ module TipitMailgunHandler
 
     def process_brs
       @doc.css("br").each do |node|
+        node.replace("\n")
+      end
+    end
+
+    def process_hrs
+      @doc.css("hr").each do |node|
         node.replace("\n")
       end
     end
