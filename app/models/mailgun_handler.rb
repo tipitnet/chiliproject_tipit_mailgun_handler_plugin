@@ -1,6 +1,6 @@
 require 'incoming'
 
-class EmailHandler < Incoming::Strategies::Mailgun
+class MailgunHandler < Incoming::Strategies::Mailgun
   include ActionView::Helpers::SanitizeHelper
   include Redmine::I18n
   setup :stripped => true
@@ -43,12 +43,12 @@ class EmailHandler < Incoming::Strategies::Mailgun
     sender_email = email.from.to_a.first.to_s.strip
     # Ignore emails received from the application emission address to avoid hell cycles
     if sender_email.downcase == Setting.mail_from.to_s.strip.downcase
-      mail_logger.info  "MailHandler: ignoring email from emission address [#{sender_email}]"
+      mail_logger.info  "MailgunHandler: ignoring email from emission address [#{sender_email}]"
       return true
     end
     @user = User.find_by_mail(sender_email) if sender_email.present?
     if @user && !@user.active?
-      mail_logger.info  "MailHandler: ignoring email from non-active user [#{@user.login}]"
+      mail_logger.info  "MailgunHandler: ignoring email from non-active user [#{@user.login}]"
       return false
     end
     if @user.nil?
@@ -89,11 +89,11 @@ class EmailHandler < Incoming::Strategies::Mailgun
     Mailer.deliver_mail_handler_missing_information(user, email.subject.to_s, e.message) if Setting.mail_handler_confirmation_on_failure
     false
   rescue MissingInformation => e
-    mail_logger.error "MailHandler: missing information from #{user}: #{e.message}"
+    mail_logger.error "MailgunHandler: missing information from #{user}: #{e.message}"
     Mailer.deliver_mail_handler_missing_information(user, email.subject.to_s, e.message) if Setting.mail_handler_confirmation_on_failure
     false
   rescue UnauthorizedAction => e
-    mail_logger.error "MailHandler: unauthorized attempt from #{user}"
+    mail_logger.error "MailgunHandler: unauthorized attempt from #{user}"
     Mailer.deliver_mail_handler_unauthorized_action(user, email.subject.to_s) if Setting.mail_handler_confirmation_on_failure
     false
   end
@@ -147,7 +147,7 @@ class EmailHandler < Incoming::Strategies::Mailgun
     add_attachments(issue)
     mail_logger.debug "Adding attachments completed"
 
-    mail_logger.info "MailHandler: issue ##{issue.id} created by #{user}"
+    mail_logger.info "MailgunHandler: issue ##{issue.id} created by #{user}"
     mail_logger.info "Email received processing completed: Issue ##{issue.id} created by #{user} \r"
 
     if !user.anonymous?
@@ -192,7 +192,7 @@ class EmailHandler < Incoming::Strategies::Mailgun
     issue.init_journal(user, cleaned_up_text_body)
     add_attachments(issue)
     issue.save!
-    mail_logger.info "MailHandler: issue ##{issue.id} updated by #{user}"
+    mail_logger.info "MailgunHandler: issue ##{issue.id} updated by #{user}"
     Mailer.deliver_mail_handler_confirmation(issue.last_journal, user, email.subject) if Setting.mail_handler_confirmation_on_success
     issue.last_journal
   end
@@ -225,7 +225,7 @@ class EmailHandler < Incoming::Strategies::Mailgun
         Mailer.deliver_mail_handler_confirmation(message, user, reply.subject) if Setting.mail_handler_confirmation_on_success
         reply
       else
-        mail_logger.info "MailHandler: ignoring reply from [#{sender_email}] to a locked topic"
+        mail_logger.info "MailgunHandler: ignoring reply from [#{sender_email}] to a locked topic"
       end
     end
   end
@@ -350,7 +350,7 @@ class EmailHandler < Incoming::Strategies::Mailgun
     if (@email.html_part.nil?)
       return cleanup_body(plain_text_body)
     else
-      converter = TipitMailHandler::TextileConverter.new(@email.html_part.body.to_s, @content_id_map)
+      converter = TipitMailgunHandler::TextileConverter.new(@email.html_part.body.to_s, @content_id_map)
       return converter.to_textile
     end
   end

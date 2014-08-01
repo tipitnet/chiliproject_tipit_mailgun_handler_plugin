@@ -321,14 +321,14 @@ test</span>"
     expected = "!image1.png!"
     image_map = { "<ii_1477855169c39137>" => 'image1.png' }
     actual = "<img src=\"cid:ii_1477855169c39137\" />"
-    converter = TipitMailHandler::TextileConverter.new(actual, image_map)
+    converter = TipitMailgunHandler::TextileConverter.new(actual, image_map)
     assert_equal expected, converter.to_textile
   end
 
   def test_div_plus_image
     input = "<div dir=\"ltr\"><div class=\"gmail_default\" style=\"font-family:arial,helvetica,sans-serif\"><br></div><div class=\"gmail_quote\"><br><div dir=\"ltr\"><div style=\"font-family:arial,helvetica,sans-serif\">plain text</div><div style=\"font-family:arial,helvetica,sans-serif\"> <img src=\"cid:ii_1477f9531e1536e7\" alt=\"Inline image 1\" width=\"454\" height=\"250\"><br> </div></div> </div><br></div>"
     image_map = { "<ii_1477f9531e1536e7>" => 'image1.png' }
-    converter = TipitMailHandler::TextileConverter.new(input, image_map)
+    converter = TipitMailgunHandler::TextileConverter.new(input, image_map)
     actual = converter.to_textile
     expected = "\n\nplain text\n!image1.png!"
     assert_equal expected, actual
@@ -337,7 +337,7 @@ test</span>"
   def test_clean_div_plus_image
     input = "<div><div><br></div><div><br><div><div>plain text</div><div><img src=\"cid:ii_1477f9531e1536e7\"><br> </div></div> </div><br></div>"
     image_map = { "<ii_1477f9531e1536e7>" => 'image1.png' }
-    converter = TipitMailHandler::TextileConverter.new(input, image_map)
+    converter = TipitMailgunHandler::TextileConverter.new(input, image_map)
     actual = converter.to_textile
     expected = "\n\nplain text\n!image1.png!"
     assert_equal expected, actual
@@ -347,7 +347,7 @@ test</span>"
   private
 
   def assert_textile(expected, actual)
-    converter = TipitMailHandler::TextileConverter.new(actual)
+    converter = TipitMailgunHandler::TextileConverter.new(actual)
     assert_equal expected, converter.to_textile
   end
 end

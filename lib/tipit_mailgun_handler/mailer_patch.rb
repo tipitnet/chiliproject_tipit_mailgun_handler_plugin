@@ -1,6 +1,6 @@
 require_dependency 'mail_handler_controller'
 
-module TipitMailHandler
+module TipitMailgunHandler
 
   module MailerPatch
 

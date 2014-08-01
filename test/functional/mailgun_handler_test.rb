@@ -1,8 +1,8 @@
 require 'json'
 require_relative '../test_helper'
-require_relative '../../app/models/email_handler'
+require_relative '../../app/models/mailgun_handler'
 
-class MailHandlerTest < ActiveSupport::TestCase
+class MailgunHandlerTest < ActiveSupport::TestCase
 
   def setup
     ProjectDetectionStrategy.global_inbox = 'inbox'
@@ -49,9 +49,9 @@ class MailHandlerTest < ActiveSupport::TestCase
       mock_request = Object.new
       mock_request.stubs(:params).returns(default_params)
       issue_count_before = Issue.count
-      EmailHandler.setup :api_key => 'a_key'
+      MailgunHandler.setup :api_key => 'a_key'
 
-      result = EmailHandler.receive(mock_request)
+      result = MailgunHandler.receive(mock_request)
 
       assert result
       assert_equal(issue_count_before + 1, Issue.count)
@@ -70,9 +70,9 @@ class MailHandlerTest < ActiveSupport::TestCase
     mock_request.stubs(:params).returns(params)
     issue_count_before = Issue.count
     Mailer.any_instance.stubs(:deliver_issue_reject_to)
-    EmailHandler.setup :api_key => 'a_key'
+    MailgunHandler.setup :api_key => 'a_key'
 
-    result = EmailHandler.receive(mock_request)
+    result = MailgunHandler.receive(mock_request)
 
     assert_equal(issue_count_before, Issue.count)
   end

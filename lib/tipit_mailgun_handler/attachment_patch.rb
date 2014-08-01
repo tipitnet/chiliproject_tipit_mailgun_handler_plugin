@@ -1,4 +1,4 @@
-module TipitMailHandler
+module TipitMailgunHandler
 
   module AttachmentPatch
 

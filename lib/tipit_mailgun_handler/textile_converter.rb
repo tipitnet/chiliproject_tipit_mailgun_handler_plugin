@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 
-module TipitMailHandler
+module TipitMailgunHandler
 
   # This class is intended to convert html from emails to valid Textile. We are not covering
   # the complete Textile syntax, we only do minimal transformations to keep resulting Textile
