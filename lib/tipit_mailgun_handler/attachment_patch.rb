@@ -37,33 +37,29 @@ module TipitMailgunHandler
       # Copies the temporary file to its final location
       # and computes its MD5 hash
       def before_save_with_tipit_patch
-        if @temp_file && (@temp_file.size > 0)
-          logger.debug("saving '#{self.diskfile}'")
-          md5 = Digest::MD5.new
-          if (@is_from_email)
+        return if @saved
+        if @is_from_email
+          if @temp_file && (@temp_file.size > 0)
+            logger.debug("saving '#{self.diskfile}'")
+            md5 = Digest::MD5.new
             File.open(diskfile, "wb") do |f|
               content = @temp_file.read
               f.write(content)
               md5.update(content)
             end
             self.digest = md5.hexdigest
-          else
-            File.open(diskfile, "wb") do |f|
-              buffer = ""
-              while (buffer = @temp_file.read(8192))
-                f.write(buffer)
-                md5.update(buffer)
-              end
-            end
-            self.digest = md5.hexdigest
           end
 
+          # Don't save the content type if it's longer than the authorized length
+          if self.content_type && self.content_type.length > 255
+            self.content_type = nil
+          end
+        else
+          before_save_without_tipit_patch
         end
-        # Don't save the content type if it's longer than the authorized length
-        if self.content_type && self.content_type.length > 255
-          self.content_type = nil
-        end
+        @saved = true
       end
+
     end
   end
 end
