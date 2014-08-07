@@ -108,7 +108,7 @@ class MailgunHandler < Incoming::Strategies::Mailgun
 
   # Creates a new issue
   def receive_issue
-    mail_logger.debug 'Entering receive_issue'
+    mail_logger.debug "Entering receive_issue from: #{user}"
 
     detected_project_id = ProjectDetectionStrategy.new.detect_project(email.to.first, user)
     project = Project.find_by_identifier(detected_project_id)
