@@ -34,6 +34,7 @@ module TipitMailgunHandler
       # Order is important here.
       process_divs
       process_paragraphs
+      process_font_tag
       process_style_modifiers
       process_headers
       process_lists
@@ -88,6 +89,14 @@ module TipitMailgunHandler
       @doc.css('p').sort { |a, b| a.children.size <=> b.children.size }.each do |node|
         text = node.children.to_s
 
+        node.replace("#{text.strip}\n")
+      end
+    end
+
+    def process_font_tag
+      # workaround for nested tags.
+      @doc.css('font').sort { |a, b| a.children.size <=> b.children.size }.each do |node|
+        text = node.children.to_s
         node.replace("#{text.strip}\n")
       end
     end

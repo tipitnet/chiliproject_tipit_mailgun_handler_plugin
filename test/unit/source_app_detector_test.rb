@@ -31,6 +31,11 @@ class SourceAppDetectorTest  < ActiveSupport::TestCase
     assert_match OutlookApp.to_s, result
   end
 
+  def test_detect_outlook_when_no_headers
+    result = detect(:outlook_no_headers)
+    assert_match OutlookApp.to_s, result
+  end
+
   def test_detect_postbox
     result = detect(:postbox)
     assert_match PostBoxApp.to_s, result

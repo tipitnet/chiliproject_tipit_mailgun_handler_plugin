@@ -2,12 +2,12 @@ class SourceAppDetector
 
   def self.initialize_strategies
     strategies = []
-    strategies << ThunderBirdApp.new
-    strategies << GmailApp.new
     strategies << MacMailApp.new
     strategies << OutlookApp.new
     strategies << PostBoxApp.new
     strategies << Zimbra72App.new
+    strategies << GmailApp.new
+    strategies << ThunderBirdApp.new
     strategies
   end
 
@@ -46,7 +46,16 @@ class MacMailApp
 end
 
 class OutlookApp
+
   def is_yours(email)
+    check_header(email) ? true : check_body(email)
+  end
+
+  def check_body(email)
+     email.html_part.body.include?('class="MsoNormal"')
+  end
+
+  def check_header(email)
     email.header[:x_mailer] && email.header[:x_mailer].value =~ /microsoft.+Outlook/i
   end
 end

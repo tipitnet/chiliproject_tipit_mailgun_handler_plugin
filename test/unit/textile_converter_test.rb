@@ -347,6 +347,9 @@ test</span>"
     assert_equal expected, actual
   end
 
+  def test_font_tag
+    assert_textile "Hello\n",'<font>Hello</font>'
+  end
 
   private
 
