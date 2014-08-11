@@ -350,7 +350,7 @@ class MailgunHandler < Incoming::Strategies::Mailgun
     if (@email.html_part.nil?)
       return cleanup_body(plain_text_body)
     else
-      converter = TipitMailgunHandler::TextileConverter.new(@email.html_part.body.to_s, @content_id_map)
+      converter = TipitMailgunHandler::Html2TextileConverter.new(@email.html_part.body.to_s, @content_id_map)
       return converter.to_textile
     end
   end
