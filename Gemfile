@@ -2,4 +2,4 @@ gem 'incoming'
 gem 'nokogiri'
 gem 'mime-types'
 
-gem 'html2textile', :path => '/Users/nicopaez/Tipit/html2textile'
+gem 'html2textile', :git => 'https://github.com/tipitnet/html2textile.git'
