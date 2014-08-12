@@ -57,7 +57,7 @@ class MailgunHandlerTest < ActiveSupport::TestCase
       assert_equal(issue_count_before + 1, Issue.count)
       created_issue = Issue.last
       assert_equal(@subject, created_issue.subject)
-      assert_equal('*We should do that again sometime.*', created_issue.description)
+      assert_equal(' *We should do that again sometime.* ', created_issue.description)
 
 
     end
