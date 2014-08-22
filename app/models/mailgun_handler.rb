@@ -350,10 +350,8 @@ class MailgunHandler < Incoming::Strategies::Mailgun
     if (@email.html_part.nil?)
       return cleanup_body(plain_text_body)
     else
-      clean_html =  @email.html_part.body.to_s.encode!('UTF-8', :invalid => :replace)
-      clean_html = clean_html.gsub("&#13;","")
-      converter = TipitMailgunHandler::Html2TextileConverter.new(clean_html, @content_id_map)
-      return converter.to_textile.encode!('UTF-8', :invalid => :replace)
+      converter = TipitMailgunHandler::Html2TextileConverter.new(@email.html_part.body.to_s, @content_id_map)
+      return converter.to_textile.encode!('UTF-8', :invalid => :replace, :undef=>:replace,:replace=>' ')
     end
   end
 
