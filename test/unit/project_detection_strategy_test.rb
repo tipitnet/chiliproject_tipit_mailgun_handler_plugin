@@ -21,12 +21,23 @@ class ProjectDetectionStrategyTest < ActiveSupport::TestCase
     assert_equal(@default_project, detected_project)
   end
 
+
   def test_return_specified_project_when_not_anonymous_user_and_project_specfied_in_address
     email_address = "chiliproject+project2@test.com"
 
     detected_project = ProjectDetectionStrategy.new.detect_project(email_address, @mock_user)
 
     assert_equal('project2', detected_project)
+  end
+
+  def test_return_global_inbox_when_user_has_no_default_project
+    email_address = "chiliproject@test.com"
+    @mock_user.stubs(:anonymous?).returns(false)
+    @mock_user.stubs(:default_project).returns(nil)
+
+    detected_project = ProjectDetectionStrategy.new.detect_project(email_address, @mock_user)
+
+    assert_equal(ProjectDetectionStrategy.global_inbox, detected_project)
   end
 
   def test_return_global_inbox_when_anonymous_user_and_no_project_specfied

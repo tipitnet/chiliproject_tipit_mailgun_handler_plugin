@@ -13,8 +13,9 @@ class ProjectDetectionStrategy
 		sender_parts = sender.split('+')
 		if sender_parts.size > 1
 			return sender_parts[1]
-		else
-			return user.anonymous? ? @@global_inbox : user.default_project.identifier
+    else
+      return @@global_inbox if user.anonymous?
+      user.default_project ? user.default_project.identifier : @@global_inbox
 		end
 	end
 
