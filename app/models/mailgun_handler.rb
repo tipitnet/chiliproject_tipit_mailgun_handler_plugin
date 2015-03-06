@@ -162,16 +162,19 @@ class MailgunHandler < Incoming::Strategies::Mailgun
     return unless issue.project.respond_to? 'default_watchers'
     mail_logger.debug "Entering add_default_watchers"
     default_watchers = issue.project.default_watchers
-    mail_logger.debug "Default watchert to add [#{default_watchers}]"
+    mail_logger.debug "Default watcher to add [#{default_watchers}]"
     if default_watchers.nil?
       mail_logger.debug "Exiting add_default_watchers"
       return
     end
     default_watchers_list = default_watchers.split(',')
     default_watchers_list.each do | watcher_id |
-      watcher = User.find(watcher_id)
-      issue.add_watcher(watcher) unless watcher.nil?
+      watcher = User.find(watcher_id) unless watcher_id.to_i == 0
+      mail_logger.debug "watched_id #{watcher_id}"
+      issue.add_watcher(watcher) unless (watcher.nil? || !watcher.active?)
+      mail_logger.debug issue.watchers
     end
+
     mail_logger.debug "Exiting add_default_watchers"
   end
 
