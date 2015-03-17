@@ -427,7 +427,7 @@ class MailgunHandler < Incoming::Strategies::Mailgun
 
   def create_logger
     tipit_logger = Logger.new("#{Rails.root}/log/received_emails.log", 'daily')
-    tipit_logger.level = Logger::DEBUG
+    tipit_logger.level = ENV['MAIL_LOGGER_LEVEL'] || Logger::DEBUG
     tipit_logger.formatter = proc do |severity, datetime, progname, msg|
       "#{severity} [#{datetime}] - #{progname}: #{msg}\n"
     end
@@ -435,11 +435,7 @@ class MailgunHandler < Incoming::Strategies::Mailgun
   end
 
   def mail_logger
-    if Rails.env.production? && ENV['LOG_ENTRIES']
-      @@tipit_logger ||= Le.new(ENV['LOG_ENTRIES'])
-    else
-      @@tipit_logger ||= create_logger
-    end
+    @@tipit_logger ||= create_logger
   end
 
   def register_source_app(email)
